@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E14D906721DE2AE500F1D4CA /* MemonryAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14D906621DE2AE500F1D4CA /* MemonryAccess.swift */; };
+		E1ACE37F21DF6B7700226E21 /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ACE37E21DF6B7700226E21 /* Closure.swift */; };
 		E1F2913A21DC57190061B196 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2913921DC57190061B196 /* AppDelegate.swift */; };
 		E1F2913C21DC57190061B196 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2913B21DC57190061B196 /* ViewController.swift */; };
 		E1F2913F21DC57190061B196 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1F2913D21DC57190061B196 /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E14D906621DE2AE500F1D4CA /* MemonryAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemonryAccess.swift; sourceTree = "<group>"; };
+		E1ACE37E21DF6B7700226E21 /* Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
 		E1F2913621DC57190061B196 /* swiftFour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftFour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1F2913921DC57190061B196 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1F2913B21DC57190061B196 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +78,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E14D906521DE2A9B00F1D4CA /* 内存安全性 */ = {
+			isa = PBXGroup;
+			children = (
+				E14D906621DE2AE500F1D4CA /* MemonryAccess.swift */,
+			);
+			path = "内存安全性";
+			sourceTree = "<group>";
+		};
+		E1ACE37D21DF6B5C00226E21 /* 闭包 */ = {
+			isa = PBXGroup;
+			children = (
+				E1ACE37E21DF6B7700226E21 /* Closure.swift */,
+			);
+			path = "闭包";
+			sourceTree = "<group>";
+		};
 		E1F2912D21DC57190061B196 = {
 			isa = PBXGroup;
 			children = (
@@ -97,7 +117,8 @@
 		E1F2913821DC57190061B196 /* swiftFour */ = {
 			isa = PBXGroup;
 			children = (
-				E1F2916821DC58C50061B196 /* Playground */,
+				E1ACE37D21DF6B5C00226E21 /* 闭包 */,
+				E14D906521DE2A9B00F1D4CA /* 内存安全性 */,
 				E1F2916721DC57430061B196 /* Main */,
 			);
 			path = swiftFour;
@@ -132,13 +153,6 @@
 				E1F2914521DC571B0061B196 /* Info.plist */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		E1F2916821DC58C50061B196 /* Playground */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Playground;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,7 +287,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1F2913C21DC57190061B196 /* ViewController.swift in Sources */,
+				E1ACE37F21DF6B7700226E21 /* Closure.swift in Sources */,
 				E1F2913A21DC57190061B196 /* AppDelegate.swift in Sources */,
+				E14D906721DE2AE500F1D4CA /* MemonryAccess.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
