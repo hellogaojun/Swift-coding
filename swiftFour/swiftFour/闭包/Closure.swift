@@ -42,10 +42,10 @@ class Closure: NSObject {
             return s1 > s2
         }
         print(reversedNames)
-        //2.从语境中推断类型 省略 {} ->返回值
+        //2.从语境中推断类型 省略 () ->返回值
         reversedNames = names.sorted(by: {s1,s2 in return s1 > s2})
         print(reversedNames)
-        //3.单表达式闭包隐式返回 省略 {} ->返回值 return
+        //3.单表达式闭包隐式返回 省略 () ->返回值 return
         reversedNames = names.sorted(by: { s1, s2 in s1 > s2 })
         print(reversedNames)
         //4.简写实际参数名
@@ -76,8 +76,123 @@ class Closure: NSObject {
         someFunc2 {
             print("😄👌")
         }
-        
+    
     }
     
     
 }
+
+//在Playground中进行测试的
+/**
+ //捕获值
+ //一个闭包能够从上下文捕获已被定义的常量和变量。即使定义这些常量和变量的原作用域已 经不存在，闭包仍能够在其函数体内引用和修改这些值。
+ 
+ func makeIncrement(forIncrement amount: Int) -> () -> Int {
+ var runningTotal  = 0
+ func increment() -> Int {
+ runningTotal += amount
+ return runningTotal;
+ }
+ 
+ return increment
+ }
+ 
+ let incrementByFive = makeIncrement(forIncrement: 5)
+ incrementByFive()
+ incrementByFive()
+ incrementByFive()
+ 
+ let incrementBySeven = makeIncrement(forIncrement: 7)
+ incrementBySeven()
+ 
+ incrementByFive()
+ 
+ //闭包是引用类型
+ let alsoIncrementByFive = incrementByFive
+ alsoIncrementByFive()
+ 
+ //逃逸闭包
+ //当闭包作为一个实际参数传递给一个函数的时候，我们就说这个闭包逃逸了，因为它可以在 函数返回之后被调用。当你声明一个接受闭包作为形式参数的函数时，你可以在形式参数前 写 @escaping 来明确闭包是允许逃逸的。
+ var completionHandlers: [() -> Void] = []
+ func someFunctionWithEscapingClosure(completionHandler: @escaping () -> Void) {
+ completionHandlers.append(completionHandler)
+ }
+ 
+ //非逃逸闭包
+ func someFunctionWithNonEscaping(closure: () -> Void) {
+ closure()
+ }
+ 
+ class SomeClass {
+ var x = 10
+ func doSomething() {
+ //让闭包 @escaping 意味着你必须在闭包中显式地引用 self
+ someFunctionWithEscapingClosure {
+ self.x = 100
+ }
+ 
+ //传给 someFunctionWithNonescapingClosure(_:) 的闭包是非逃逸闭包，也 就是说它可以隐式地引用 self 。
+ someFunctionWithNonEscaping {
+ x = 200
+ }
+ }
+ 
+ }
+ 
+ let instance = SomeClass()
+ instance.doSomething()
+ print(instance.x)
+ 
+ completionHandlers.first?()
+ print(instance.x)
+ 
+ //自动闭包
+ //自动闭包是一种自动创建的用来把作为实际参数传递给函数的表达式打包的闭包。它不接受 任何实际参数，并且当它被调用时，它会返回内部打包的表达式的值。
+ //自动闭包允许延时处理,自动闭包内部的代码直到你调用它的时候才会运行
+ 
+ var customersInLine = ["Apple","Orange","Watermelon","banana","tomato"]
+ print(customersInLine.count)
+ 
+ //省略部分:() -> String in return
+ let customerProvider = {customersInLine.remove(at: 0)}
+ print(customersInLine.count)
+ 
+ print("New fruit0 \(customerProvider())")
+ print(customersInLine.count)
+ //参数类型为:一个明确有返回值类型的闭包
+ func serve(customer customerProvider: () -> String) {
+ print("New fruit1 \(customerProvider())")
+ }
+ //serve { () -> String in
+ //
+ //}
+ serve(customer: {customersInLine.remove(at: 0)})
+ 
+ //参数类型为:使用 @autoclosure标记该形式参数 使用自动闭包
+ func serve2(customer customerProvider: @autoclosure () -> String) {
+ print("New fruit2 \(customerProvider())")
+ }
+ //现在你可以调用函数就像它接收了一个 String 实际参数 而不是闭包。实际参数自动地转换为闭包，因为 customerProvider 形式参数的类型被标记为 @autoclosure 标记。
+ serve2(customer: customersInLine.remove(at: 0))
+ 
+ 
+ //普通实现||
+ func OR(left: Bool,right: Bool) -> Bool {
+ if left {
+ return true
+ } else {
+ return right
+ }
+ }
+ 
+ //使用@autoclosure标志实现||的优化
+ func OR2(left: Bool,right: @autoclosure () -> Bool) -> Bool {
+ if left {
+ return true
+ } else {
+ return right()
+ }
+ }
+ 
+ ///也可以同时使用@autoclosure,@escaping设置(自动) (逃逸) 闭包
+ */
