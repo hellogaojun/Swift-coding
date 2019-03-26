@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E11EED4F21E3320D00DF6451 /* ARC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11EED4E21E3320D00DF6451 /* ARC.swift */; };
 		E14D906721DE2AE500F1D4CA /* MemonryAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14D906621DE2AE500F1D4CA /* MemonryAccess.swift */; };
 		E1ACE37F21DF6B7700226E21 /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ACE37E21DF6B7700226E21 /* Closure.swift */; };
 		E1F2913A21DC57190061B196 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2913921DC57190061B196 /* AppDelegate.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E11EED4E21E3320D00DF6451 /* ARC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARC.swift; sourceTree = "<group>"; };
 		E14D906621DE2AE500F1D4CA /* MemonryAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemonryAccess.swift; sourceTree = "<group>"; };
 		E1ACE37E21DF6B7700226E21 /* Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
 		E1F2913621DC57190061B196 /* swiftFour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftFour.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E11EED4D21E331B900DF6451 /* ARC */ = {
+			isa = PBXGroup;
+			children = (
+				E11EED4E21E3320D00DF6451 /* ARC.swift */,
+			);
+			path = ARC;
+			sourceTree = "<group>";
+		};
 		E14D906521DE2A9B00F1D4CA /* 内存安全性 */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +127,7 @@
 		E1F2913821DC57190061B196 /* swiftFour */ = {
 			isa = PBXGroup;
 			children = (
+				E11EED4D21E331B900DF6451 /* ARC */,
 				E1ACE37D21DF6B5C00226E21 /* 闭包 */,
 				E14D906521DE2A9B00F1D4CA /* 内存安全性 */,
 				E1F2916721DC57430061B196 /* Main */,
@@ -289,6 +300,7 @@
 				E1F2913C21DC57190061B196 /* ViewController.swift in Sources */,
 				E1ACE37F21DF6B7700226E21 /* Closure.swift in Sources */,
 				E1F2913A21DC57190061B196 /* AppDelegate.swift in Sources */,
+				E11EED4F21E3320D00DF6451 /* ARC.swift in Sources */,
 				E14D906721DE2AE500F1D4CA /* MemonryAccess.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,7 +407,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -450,7 +462,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -465,6 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SY6Q9GBZHX;
 				INFOPLIST_FILE = "$(SRCROOT)/swiftFour/Main/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -473,7 +486,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = GJ.swiftFour;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -482,6 +495,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SY6Q9GBZHX;
 				INFOPLIST_FILE = "$(SRCROOT)/swiftFour/Main/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -490,7 +504,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = GJ.swiftFour;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
