@@ -10,6 +10,7 @@
 		E11EED4F21E3320D00DF6451 /* ARC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11EED4E21E3320D00DF6451 /* ARC.swift */; };
 		E14D906721DE2AE500F1D4CA /* MemonryAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14D906621DE2AE500F1D4CA /* MemonryAccess.swift */; };
 		E1ACE37F21DF6B7700226E21 /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ACE37E21DF6B7700226E21 /* Closure.swift */; };
+		E1B04B75224A24AE00E7D103 /* OptionalChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B04B74224A24AE00E7D103 /* OptionalChain.swift */; };
 		E1F2913A21DC57190061B196 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2913921DC57190061B196 /* AppDelegate.swift */; };
 		E1F2913C21DC57190061B196 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F2913B21DC57190061B196 /* ViewController.swift */; };
 		E1F2913F21DC57190061B196 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1F2913D21DC57190061B196 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		E11EED4E21E3320D00DF6451 /* ARC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARC.swift; sourceTree = "<group>"; };
 		E14D906621DE2AE500F1D4CA /* MemonryAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemonryAccess.swift; sourceTree = "<group>"; };
 		E1ACE37E21DF6B7700226E21 /* Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
+		E1B04B74224A24AE00E7D103 /* OptionalChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalChain.swift; sourceTree = "<group>"; };
 		E1F2913621DC57190061B196 /* swiftFour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftFour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1F2913921DC57190061B196 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1F2913B21DC57190061B196 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,14 @@
 			path = "闭包";
 			sourceTree = "<group>";
 		};
+		E1B04B73224A246B00E7D103 /* 可选链 */ = {
+			isa = PBXGroup;
+			children = (
+				E1B04B74224A24AE00E7D103 /* OptionalChain.swift */,
+			);
+			path = "可选链";
+			sourceTree = "<group>";
+		};
 		E1F2912D21DC57190061B196 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +137,7 @@
 		E1F2913821DC57190061B196 /* swiftFour */ = {
 			isa = PBXGroup;
 			children = (
+				E1B04B73224A246B00E7D103 /* 可选链 */,
 				E11EED4D21E331B900DF6451 /* ARC */,
 				E1ACE37D21DF6B5C00226E21 /* 闭包 */,
 				E14D906521DE2A9B00F1D4CA /* 内存安全性 */,
@@ -300,6 +311,7 @@
 				E1F2913C21DC57190061B196 /* ViewController.swift in Sources */,
 				E1ACE37F21DF6B7700226E21 /* Closure.swift in Sources */,
 				E1F2913A21DC57190061B196 /* AppDelegate.swift in Sources */,
+				E1B04B75224A24AE00E7D103 /* OptionalChain.swift in Sources */,
 				E11EED4F21E3320D00DF6451 /* ARC.swift in Sources */,
 				E14D906721DE2AE500F1D4CA /* MemonryAccess.swift in Sources */,
 			);
